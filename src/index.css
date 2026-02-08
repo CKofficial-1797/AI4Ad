@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@config "../tailwind.config.ts";
+
+html{
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+}
+
+@layer base {
+  :root {
+    --background: 220 13% 91%;
+    --foreground: 220 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 84% 4.9%;
+
+    --primary: 228 39% 25%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 228 39% 25%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 40 89% 52%;
+    --accent-foreground: 228 39% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 40 89% 52%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 228 39% 25%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 40 89% 52%;
+    --sidebar-primary-foreground: 228 39% 25%;
+    --sidebar-accent: 228 35% 30%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 228 35% 30%;
+    --sidebar-ring: 40 89% 52%;
+
+    /* Adious AI Custom Properties */
+    --navy: 228 39% 25%;
+    --gold: 40 89% 52%;
+    --cloud: 180 6% 95%;
+    --true-black: 0 0% 0%;
+  }
+
+  .dark {
+    --background: 228 39% 25%;
+    --foreground: 210 40% 98%;
+
+    --card: 228 39% 25%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 228 39% 25%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 228 39% 25%;
+
+    --secondary: 228 35% 30%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 228 35% 30%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 40 89% 52%;
+    --accent-foreground: 228 39% 25%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 228 35% 30%;
+    --input: 228 35% 30%;
+    --ring: 40 89% 52%;
+
+    --sidebar-background: 228 39% 25%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 40 89% 52%;
+    --sidebar-primary-foreground: 228 39% 25%;
+    --sidebar-accent: 228 35% 30%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 228 35% 30%;
+    --sidebar-ring: 40 89% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1 {
+    @apply text-h1 font-inter;
+  }
+
+  h2 {
+    @apply text-h2 font-inter;
+  }
+
+  h3 {
+    @apply text-h3 font-inter;
+  }
+
+  button {
+    @apply font-outfit font-medium uppercase tracking-wide;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold hover:bg-gold-600 text-navy font-outfit font-medium uppercase tracking-wide px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-navy-600 hover:bg-navy-700 text-white font-outfit font-medium uppercase tracking-wide px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg;
+  }
+
+  .card-navy {
+    @apply bg-navy border border-navy-400 text-white rounded-xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-gold to-gold-400 bg-clip-text text-transparent;
+  }
+}
